@@ -1,3 +1,10 @@
 @layer utilities {
+
+  @mixin btn-anim() {
+    transition: all .15s ease;
+  }
+  .btn-anim {
+    @include btn-anim;
+  }
 }
 
