@@ -2,6 +2,9 @@
   /******
   * global
   ******/
+  html, body, #app {
+    @apply w-full h-full;
+  }
   html {
     scroll-behavior: smooth;
     /* font-family: Noto Sans CJK TC, Monument Extended; */

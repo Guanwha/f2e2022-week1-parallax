@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full">
+  <div class="w-full h-full bg-n6">
     <Header/>
-    <!-- banner -->
+    <Banner/>
     <!-- question -->
-    <!-- title banner -->
+    <!-- break question -->
     <!-- level information -->
     <!-- event description -->
     <!-- award -->
@@ -14,6 +14,7 @@
 
 <script setup>
 import Header from '@/components/Header.vue';
+import Banner from '@/components/Banner.vue';
 </script>
 
 <style lang="scss" scoped>

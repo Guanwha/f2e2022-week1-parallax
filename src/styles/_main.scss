@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer utilities {
 
   @mixin btn-anim() {
@@ -5,6 +9,13 @@
   }
   .btn-anim {
     @include btn-anim;
+  }
+
+  .btn-signup {
+    @apply rounded-full;
+    @apply bg-y1;
+    @apply px-[72px] py-5;
+    @apply text-h4 font-bold;
   }
 }
 
