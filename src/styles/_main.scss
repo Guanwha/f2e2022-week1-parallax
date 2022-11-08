@@ -16,6 +16,10 @@
     @apply bg-y1;
     @apply px-[72px] py-5;
     @apply text-h4 font-bold;
+    &:hover {
+      @apply bg-y2;
+      box-shadow: 0px 0px 10px rgba($y1, 0.6);
+    }
   }
 }
 
