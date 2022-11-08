@@ -3,9 +3,9 @@
     <!-- left -->
     <div class="flex-rlc gap-5">
       <button type="button" class="block sm:hidden" @click="isOpenMobileMenu = true">
-        <img src="@/assets/btn_menu.svg" alt="開啟選單">
+        <img src="@/assets/header/btn_menu.svg" alt="開啟選單">
       </button>
-      <img src="@/assets/thef2e.svg" alt="logo">
+      <img src="@/assets/header/thef2e.svg" alt="logo" class="h-[22px]">
     </div>
     <!-- right -->
     <ul class="flex-rrc gap-8">
@@ -19,7 +19,7 @@
     </ul>
     <!-- pop menu (mobile) -->
     <div class="absolute top-0 inset-x-0 bg-n6 flex-ccc px-4 py-8" v-if="isOpenMobileMenu">
-      <div class="w-full" @click="isOpenMobileMenu = false"><img src="@/assets/btn_close.svg" alt="關閉選單"></div>
+      <div class="w-full" @click="isOpenMobileMenu = false"><img src="@/assets/header/btn_close.svg" alt="關閉選單"></div>
       <ul>
         <li class="py-4 indicate-v"><span>關卡資訊</span></li>
         <li class="py-4 indicate-v"><span>攻略資源</span></li>
