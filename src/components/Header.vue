@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[90px] bg-n6 flex-rsbc px-4 sm:px-8 relative">
+  <header class="w-full h-[90px] bg-n6 flex-rsbc px-4 sm:px-8 relative">
     <!-- left -->
     <div class="flex-rlc gap-5">
       <button type="button" class="block sm:hidden" @click="isOpenMobileMenu = true">
@@ -27,7 +27,7 @@
       </ul>
       <button type="button" class="mt-6 w-full border rounded-button py-2" :class="[classLoginBtnNormal, classLoginBtnHover]">登入</button>
     </div>
-  </div>
+  </header>
 </template>
 
 <script setup>
