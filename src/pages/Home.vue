@@ -3,7 +3,7 @@
     <Header/>
     <Banner/>
     <Question/>
-    <!-- break question -->
+    <QuestionBreak/>
     <!-- level information -->
     <!-- event description -->
     <!-- award -->
@@ -16,6 +16,7 @@
 import Header from '@/components/Header.vue';
 import Banner from '@/components/Banner.vue';
 import Question from '@/components/Question.vue';
+import QuestionBreak from '@/components/QuestionBreak.vue';
 </script>
 
 <style lang="scss" scoped>
