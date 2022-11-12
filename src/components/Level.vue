@@ -1,12 +1,12 @@
 <template>
   <section class="mx-auto w-[1104px] py-40 flex-ccc gap-[60px]">
     <div class="flex-ccc gap-10 relative">
-      <div class="text-h3 text-cs1 border-4 border-cs1 rounded-full px-9 py-4">年度最強合作 三大主題來襲</div>
-      <div class="text-h5 text-white flex-ccc">
+      <h2 class="text-h3 text-cs1 border-4 border-cs1 rounded-full px-9 py-4">年度最強合作 三大主題來襲</h2>
+      <h3 class="text-h5 text-white flex-ccc">
         <p>各路廠商強強聯手</p>
         <p>共同設計出接地氣的網頁互動挑戰關卡</p>
-      </div>
-      <img class="absolute bottom-[83%] left-[97%]" src="@/assets/level/lightning.svg" alt="lightning">
+      </h3>
+      <img id="lightning" class="absolute bottom-[83%] left-[97%]" src="@/assets/level/lightning.svg" alt="lightning">
     </div>
     <ul class="flex-rcc gap-10">
       <li class="card" v-for="(level, idx) in levels" :key="idx">
@@ -37,6 +37,11 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 const levels = [
   {
     week: 'WEEK 1',
@@ -60,6 +65,52 @@ const levels = [
     imgName: 'level-3',
   },
 ];
+
+onMounted(() => {
+  let h2 = document.querySelector("h2");
+  let h3 = document.querySelector("h3");
+  let lightning = document.querySelector("#lightning");
+  let cards = document.querySelectorAll(".card");
+  let tl = gsap.timeline();
+
+  // enter animation
+  tl.from(h2, { y: -20, duration: 1 }, 0)
+    .from(h3, { y: 100, opacity: 0, duration: 1 }, 0)
+    .from(lightning, { x: -30, y: 30, opacity: 0, scale: 0, ease: "elastic"}, 0);
+  let cardAry = [ ...cards ];
+  cardAry.reverse().forEach((element, idx) => {
+    let card_back = element.querySelector(".card-back");
+    tl.from(card_back, { y: 100 + idx*50, opacity: 0, duration: 1 }, 0);
+  });
+
+  // flip cards
+  cards.forEach((element) => {
+    let card_back = element.querySelector(".card-back");
+    let card_front = element.querySelector(".card-front");
+    tl.to(card_back, {
+            rotationY: 90,
+            autoAlpha: 0,
+            ease: "linear",
+            duration: .3,
+          })
+      .to(card_front, {
+            rotationY: 0,
+            autoAlpha: 1,
+            ease: "linear",
+            duration: .3,
+          });
+  });
+  
+  // set trigger
+  ScrollTrigger.create({
+    trigger: cards[0],
+    start: "top 50%",
+    end: "50% 50%",
+    // scrub: 1,                                  // control by scroll
+    toggleActions: "play none none reverse",   // auto-animation
+    animation: tl,
+  });
+});
 </script>
 
 <style lang="scss">
