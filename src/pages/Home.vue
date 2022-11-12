@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-fit bg-n6">
+  <div class="w-full h-fit bg-cn6">
     <Header/>
     <Banner/>
     <Question/>

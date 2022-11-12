@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full h-[90px] bg-n6 flex-rsbc px-4 sm:px-8 relative">
+  <header class="w-full h-[90px] bg-cn6 flex-rsbc px-4 sm:px-8 relative">
     <!-- left -->
     <div class="flex-rlc gap-5">
       <button type="button" class="block sm:hidden" @click="isOpenMobileMenu = true">
@@ -18,7 +18,7 @@
       </button>
     </ul>
     <!-- pop menu (mobile) -->
-    <div class="absolute top-0 inset-x-0 bg-n6 flex-ccc px-4 py-8" v-if="isOpenMobileMenu">
+    <div class="absolute top-0 inset-x-0 bg-cn6 flex-ccc px-4 py-8" v-if="isOpenMobileMenu">
       <div class="w-full" @click="isOpenMobileMenu = false"><img src="@/assets/header/btn_close.svg" alt="關閉選單"></div>
       <ul>
         <li class="py-4 indicate-v"><span>關卡資訊</span></li>
@@ -35,8 +35,8 @@ import { ref } from 'vue';
 
 // header
 const classLoginBtnPadding = `px-4 py-2 sm:px-6 sm:py-3`;
-const classLoginBtnNormal = `border-n1 text-n1`;
-const classLoginBtnHover = `hover:bg-s1/20 hover:border-s1 hover:text-s1"`;
+const classLoginBtnNormal = `border-cn1 text-cn1`;
+const classLoginBtnHover = `hover:bg-cs1/20 hover:border-cs1 hover:text-cs1"`;
 const isOpenMobileMenu = ref(false);
 
 </script>
@@ -45,9 +45,9 @@ const isOpenMobileMenu = ref(false);
 @import '@/styles/_variables.scss';
 
 ul>li {
-  @apply text-p3 text-n2;
+  @apply text-p3 text-cn2;
   &:hover {
-    @apply text-n1;
+    @apply text-cn1;
   }
   &.indicate-h {
     position: relative;
@@ -60,7 +60,7 @@ ul>li {
       width: 12px;
       height: 4px;
       @apply rounded-full;
-      @apply bg-s1;
+      @apply bg-cs1;
     }
   }
   &.indicate-v {
@@ -74,11 +74,11 @@ ul>li {
       width: 4px;
       height: 9px;
       @apply rounded-full;
-      @apply bg-s1;
+      @apply bg-cs1;
     }
   }
 }
 button:hover {
-  box-shadow: 0px 0px 1rem rgba($s1, 0.6);
+  box-shadow: 0px 0px 1rem rgba($cs1, 0.6);
 }
 </style>

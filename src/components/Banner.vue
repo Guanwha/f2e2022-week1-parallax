@@ -7,7 +7,7 @@
       <img id="banner_dashboard" class="w-[17%] absolute top-[36.5%] right-[18%] rotate-[16.6deg]" src="@/assets/banner/dashboard.svg" alt="dashboard">
       <img id="banner_path_right" class="w-[13.5%] absolute top-[17.5%] right-[6.8%]" src="@/assets/banner/path_right.svg" alt="path right">
       <img id="banner_title" class="w-[50%] absolute top-[15%] left-1/2 -translate-x-1/2" src="@/assets/banner/title.svg" alt="title">
-      <p class="absolute top-[40%] left-1/2 -translate-x-1/2 text-[28px] tracking-[.8em] text-n1">互動式網頁設計</p>
+      <p class="absolute top-[40%] left-1/2 -translate-x-1/2 text-[28px] tracking-[.8em] text-cn1">互動式網頁設計</p>
       <button class="absolute top-[55%] left-1/2 -translate-x-1/2 btn-signup">立即報名</button>
     </section>
     <!-- marquee -->
