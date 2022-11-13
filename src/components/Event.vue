@@ -85,7 +85,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-const classCard = `w-[520px] h-[300px] p-10 rounded-card border-[3px] border-cn1 flex-rsbc`;
+const classCard = `card flex-rsbc`;
 const classCardIcon = `w-[120px] h-[120px]`;
 const classCardInfo = `w-[260px] flex-ccl gap-4 text-cn1`;
 const classCardTitle = `text-h3 font-bold`;
@@ -124,5 +124,17 @@ onMounted(() => {
 </script>
 
 <style>
-
+.card {
+  @apply w-[520px] h-[300px];
+  @apply p-10;
+  @apply rounded-card border-[3px] border-cn1;
+  &:hover {
+    background: rgba(110, 119, 233, 0.1);
+    @apply border-cp1;
+    box-shadow: 0px 0px 10px rgba($cp2, 0.6);
+    h3 {
+      @apply text-cp1;
+    }
+  }
+}
 </style>
