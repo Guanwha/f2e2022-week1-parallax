@@ -16,61 +16,65 @@
       <div id="line" class="line text-shadow-white"></div>
     </div>
     <!-- review + award -->
-    <div id="info" class="flex-rcc gap-[60px]">
+    <div id="info" class="flex-rct gap-[60px]">
       <!-- review -->
-      <div :class="classCard">
-        <div :class="classCardTop">
-          <img class="icon" src="@/assets/award/icon_review.png" alt="review">
-          <h3 :class="classCardTitle">評審機制</h3>
-        </div>
-        <div :class="classCardBottom" class="gap-8">
-          <div class="flex-ctl gap-2">
-            <h4 class="text-h4">初選：</h4>
-            <p class="text-h5">將由六角學院前端、UI 評審進行第一波篩選。</p>
+      <div class="award-card-border">
+        <div :class="classCard">
+          <div :class="classCardTop">
+            <img class="icon" src="@/assets/award/icon_review.png" alt="review">
+            <h3 :class="classCardTitle">評審機制</h3>
           </div>
-          <div class="flex-ctl gap-2">
-            <h4 class="text-h4">決選：</h4>
-            <p class="text-h5">由六角學院與贊助廠商討論，進行最後篩選，並於 12/30(五) 由評審進行直播公布名單！</p>
+          <div :class="classCardBottom" class="gap-8">
+            <div class="flex-ctl gap-2">
+              <h4 class="text-h4">初選：</h4>
+              <p class="text-h5">將由六角學院前端、UI 評審進行第一波篩選。</p>
+            </div>
+            <div class="flex-ctl gap-2">
+              <h4 class="text-h4">決選：</h4>
+              <p class="text-h5">由六角學院與贊助廠商討論，進行最後篩選，並於 12/30(五) 由評審進行直播公布名單！</p>
+            </div>
           </div>
         </div>
       </div>
       <!-- award -->
-      <div :class="classCard">
-        <div :class="classCardTop">
-          <img class="icon" src="@/assets/award/icon_award.png" alt="award">
-          <h3 :class="classCardTitle">獎金</h3>
+      <div class="award-card-border">
+        <div :class="classCard">
+          <div :class="classCardTop">
+            <img class="icon" src="@/assets/award/icon_award.png" alt="award">
+            <h3 :class="classCardTitle">獎金</h3>
+          </div>
+          <ul :class="classCardBottom" class="gap-6">
+            <li class="flex-ctl gap-2">
+              <h5 :class="classCardInfoH5">
+                <span class="font-bold">初選佳作：</span>
+                <span class="">共六十位</span>
+                <span class="text-cs1">數位獎狀</span>
+              </h5>
+              <p class="text-cn2">每週主題個人組十位、團體組十組</p>
+            </li>
+            <li class="flex-ctl gap-2">
+              <h5 :class="classCardInfoH5">
+                <span class="font-bold">個人企業獎：</span>
+                <span class="">共六位</span>
+                <span class="text-cs1">NTD 3,000/位</span>
+              </h5>
+              <p class="text-cn2">每週主題各兩名，設計一位、前端 一位</p>
+            </li>
+            <li class="flex-ctl gap-2">
+              <h5 :class="classCardInfoH5">
+                <span class="font-bold">團體企業獎：</span>
+                <span class="">共三組 </span>
+                <span class="text-cs1">NTD 10,000/組</span>
+              </h5>
+              <p class="text-cn2">每週主題各 1 組</p>
+            </li>
+            <li class="flex-ctl gap-2">
+              <h5 :class="classCardInfoH5">
+                <span class="font-bold">以上皆提供完賽數位獎狀</span>
+              </h5>
+            </li>
+          </ul>
         </div>
-        <ul :class="classCardBottom" class="gap-6">
-          <li class="flex-ctl gap-2">
-            <h5 :class="classCardInfoH5">
-              <span class="font-bold">初選佳作：</span>
-              <span class="">共六十位</span>
-              <span class="text-cs1">數位獎狀</span>
-            </h5>
-            <p class="text-cn2">每週主題個人組十位、團體組十組</p>
-          </li>
-          <li class="flex-ctl gap-2">
-            <h5 :class="classCardInfoH5">
-              <span class="font-bold">個人企業獎：</span>
-              <span class="">共六位</span>
-              <span class="text-cs1">NTD 3,000/位</span>
-            </h5>
-            <p class="text-cn2">每週主題各兩名，設計一位、前端 一位</p>
-          </li>
-          <li class="flex-ctl gap-2">
-            <h5 :class="classCardInfoH5">
-              <span class="font-bold">團體企業獎：</span>
-              <span class="">共三組 </span>
-              <span class="text-cs1">NTD 10,000/組</span>
-            </h5>
-            <p class="text-cn2">每週主題各 1 組</p>
-          </li>
-          <li class="flex-ctl gap-2">
-            <h5 :class="classCardInfoH5">
-              <span class="font-bold">以上皆提供完賽數位獎狀</span>
-            </h5>
-          </li>
-        </ul>
       </div>
     </div>
   </section>
@@ -82,7 +86,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-const classCard = `bg-cn4 rounded-card p-10 flex-ctc`;
+const classCard = `award-card flex-ctc`;
 const classCardTop = `pb-4 flex-ccc`;
 const classCardTitle = `text-h2 text-cp1 font-bold`;
 const classCardBottom = `p-10 flex-ctl text-cn1`;
@@ -121,5 +125,21 @@ onMounted(() => {
 }
 .icon {
   @apply w-20 h-20;
+}
+.award-card {
+  @apply rounded-card;
+  @apply bg-cn4;
+  @apply duration-1000;
+  @apply p-10;
+}
+.award-card-border {
+  @apply rounded-card;
+  background: linear-gradient(100.38deg, #313A65 3.95%, rgba(49, 58, 101, 0) 100%);
+  @apply duration-1000;
+  @apply p-0.5;
+  &:hover {
+    background: linear-gradient(142.33deg, rgba(157, 164, 255, 0.8) -0.03%, rgba(85, 255, 173, 0.8) 99.97%);
+    @apply -translate-y-8;
+  }
 }
 </style>
