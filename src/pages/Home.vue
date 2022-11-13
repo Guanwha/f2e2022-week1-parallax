@@ -9,7 +9,8 @@
     <Award/>
     <QA/>
     <Sponsors/>
-    <div class="h-96"></div>
+    <!-- copyright -->
+    <div class="w-full p-8 text-cn1 text-center">Copyright © 2022 HexSchool.All rights reserved.</div>
   </div>
 </template>
 
