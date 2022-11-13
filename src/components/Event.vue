@@ -85,7 +85,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-const classCard = `card flex-rsbc`;
+const classCard = `event-card flex-rsbc`;
 const classCardIcon = `w-[120px] h-[120px]`;
 const classCardInfo = `w-[260px] flex-ccl gap-4 text-cn1`;
 const classCardTitle = `text-h3 font-bold`;
@@ -124,7 +124,7 @@ onMounted(() => {
 </script>
 
 <style>
-.card {
+.event-card {
   @apply w-[520px] h-[300px];
   @apply p-10;
   @apply rounded-card border-[3px] border-cn1;
