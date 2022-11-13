@@ -1,7 +1,7 @@
 <template>
-  <section class="mx-auto w-[1104px] py-40 flex-ccc gap-[100px]">
+  <section id="event" class="mx-auto w-[1104px] py-40 flex-ccc gap-[100px]">
     <!-- title -->
-    <div class="flex-rcc">
+    <div id="event-title" class="flex-rcc">
       <img src="@/assets/event/title_left.svg" alt="">
       <h2 class="text-cn1 text-h1 font-bold drop-shadow-white px-9">活動說明</h2>
       <img src="@/assets/event/title_right.svg" alt="">
@@ -10,7 +10,7 @@
     <div class="flex-ccc">
       <div class="flex-rsbc">
         <!-- flow 1 -->
-        <div :class="classCard">
+        <div id="flow-1" :class="classCard">
           <img :class="classCardIcon" src="@/assets/event/icon_signup.png" alt="signup icon">
           <div :class="classCardInfo">
             <h3 :class="classCardTitle">開放報名</h3>
@@ -23,9 +23,9 @@
           </div>
         </div>
         <!-- > -->
-        <img class="m-9" src="@/assets/event/icon_arrow_right.svg" alt="">
+        <img id="to-right" class="m-9" src="@/assets/event/icon_arrow_right.svg" alt="">
         <!-- flow 2 -->
-        <div :class="classCard">
+        <div id="flow-2" :class="classCard">
           <div :class="classCardInfo">
             <h3 :class="classCardTitle">各組別開賽</h3>
             <div :class="classCardTime">
@@ -42,11 +42,11 @@
         <!-- V -->
         <div></div>
         <div></div>
-        <img class="m-9" src="@/assets/event/icon_arrow_down.svg" alt="">
+        <img id="to-down" class="m-9" src="@/assets/event/icon_arrow_down.svg" alt="">
       </div>
       <div class="flex-rsbc flex-r-reverse">
         <!-- flow 3 -->
-        <div :class="classCard">
+        <div id="flow-3" :class="classCard">
           <div :class="classCardInfo">
             <h3 :class="classCardTitle">線上直播</h3>
             <div :class="classCardTime">
@@ -59,9 +59,9 @@
           <img :class="classCardIcon" src="@/assets/event/icon_live.png" alt="start icon">
         </div>
         <!-- < -->
-        <img class="m-9" src="@/assets/event/icon_arrow_left.svg" alt="">
+        <img id="to-left" class="m-9" src="@/assets/event/icon_arrow_left.svg" alt="">
         <!-- flow 4 -->
-        <div :class="classCard">
+        <div id="flow-4" :class="classCard">
           <img :class="classCardIcon" src="@/assets/event/icon_upload.png" alt="upload icon">
           <div :class="classCardInfo">
             <h3 :class="classCardTitle">登錄作品</h3>
@@ -80,6 +80,11 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 const classCard = `w-[520px] h-[300px] p-10 rounded-card border-[3px] border-cn1 flex-rsbc`;
 const classCardIcon = `w-[120px] h-[120px]`;
 const classCardInfo = `w-[260px] flex-ccl gap-4 text-cn1`;
@@ -89,6 +94,33 @@ const classCardDate = `mr-2 text-cs1`;
 const classCardDateTo = `w-full flex-rcc`;
 const classCardDateToIcon = `w-0.5 h-3 border border-n1`;
 const classCardDescription = `text-h5`;
+
+onMounted(() => {
+  let title = document.querySelector("#event-title");
+  let flow_1 = document.querySelector("#flow-1");
+  let to_right = document.querySelector("#to-right");
+  let flow_2 = document.querySelector("#flow-2");
+  let to_down = document.querySelector("#to-down");
+  let flow_3 = document.querySelector("#flow-3");
+  let to_left = document.querySelector("#to-left");
+  let flow_4 = document.querySelector("#flow-4");
+  let tl = gsap.timeline().from(title, { y: 50, opacity: 0.5, duration: 0.5 }, 0)
+                          .from(flow_1, { x: -50, opacity: 0, duration: 0.5 }, 0)
+                          .from(to_right, { x: -50, opacity: 0, duration: 0.25 })
+                          .from(flow_2, { x: -50, opacity: 0, duration: 0.5 })
+                          .from(to_down, { y: -50, opacity: 0, duration: 0.25 })
+                          .from(flow_3, { y: -50, opacity: 0, duration: 0.5 })
+                          .from(to_left, { x: 50, opacity: 0, duration: 0.25 })
+                          .from(flow_4, { x: 50, opacity: 0, duration: 0.5 });
+  // set trigger
+  ScrollTrigger.create({
+    trigger: '#event',
+    start: "30% center",
+    // scrub: 1,                                  // control by scroll
+    toggleActions: "play none none reverse",   // auto-animation
+    animation: tl,
+  });
+});
 </script>
 
 <style>
