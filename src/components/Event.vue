@@ -3,7 +3,7 @@
     <!-- title -->
     <div id="event-title" class="flex-rcc">
       <img src="@/assets/event/title_left.svg" alt="">
-      <h2 class="text-cn1 text-h1 font-bold drop-shadow-white px-9">活動說明</h2>
+      <h2 class="text-cn1 text-h1 font-bold text-shadow-white px-9">活動說明</h2>
       <img src="@/assets/event/title_right.svg" alt="">
     </div>
     <!-- flow cards -->
