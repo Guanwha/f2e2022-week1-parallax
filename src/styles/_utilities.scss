@@ -398,6 +398,9 @@
   .text-shadow-black {
     filter: drop-shadow(0 0 0.05rem black);
   }
+  .drop-shadow-yellow {
+    filter: drop-shadow(0 0 10px rgba(255, 243, 133, 0.6));
+  }
 
   /*
     for tooltip (up)

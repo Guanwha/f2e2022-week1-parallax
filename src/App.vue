@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-red-300 sm:bg-yellow-300 md:bg-green-300 lg:bg-blue-300 xl:bg-y1 flex-rcc">
+  <!-- <div class="bg-red-300 sm:bg-yellow-300 md:bg-green-300 lg:bg-blue-300 xl:bg-cy1 flex-rcc">
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -8,13 +8,15 @@
     </a>
   </div>
   <HelloWorld msg="Vite + Vue (中文標題)" />
-  <div class="w-80 h-32 border border-y1 rounded-button"></div>
+  <div class="w-80 h-32 border border-cy1 rounded-button"></div> -->
+  <Home/>
 </template>
 
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import Home from '@/pages/Home.vue';
 </script>
 
 <style scoped>
