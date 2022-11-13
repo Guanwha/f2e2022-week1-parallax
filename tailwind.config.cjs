@@ -48,6 +48,10 @@ module.exports = {
       dropShadow: {
         'white': '0 0px 10px rgba(255, 255, 255, 0.6)',
       },
+      spacing: {
+        '15': '3.75rem',  // [60px]
+        '35': '8.75rem',  // [140px]
+      },
     },
   },
   plugins: [],

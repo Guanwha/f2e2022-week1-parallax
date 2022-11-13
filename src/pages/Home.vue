@@ -8,7 +8,7 @@
     <Event/>
     <Award/>
     <QA/>
-    <!-- sponser -->
+    <Sponsors/>
     <div class="h-96"></div>
   </div>
 </template>
@@ -22,6 +22,7 @@ import Level from '@/components/Level.vue';
 import Event from '@/components/Event.vue';
 import Award from '@/components/Award.vue';
 import QA from '@/components/QA.vue';
+import Sponsors from '@/components/Sponsors.vue';
 </script>
 
 <style lang="scss" scoped>
