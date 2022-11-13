@@ -45,6 +45,9 @@ module.exports = {
         'card': '2rem',
         'button': '9999px',
       },
+      dropShadow: {
+        'white': '0 0px 10px rgba(255, 255, 255, 0.6)',
+      },
     },
   },
   plugins: [],

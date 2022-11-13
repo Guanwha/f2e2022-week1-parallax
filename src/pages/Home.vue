@@ -5,7 +5,7 @@
     <Question/>
     <QuestionBreak/>
     <Level/>
-    <!-- event description -->
+    <Event/>
     <!-- award -->
     <!-- QA -->
     <!-- sponser -->
@@ -19,6 +19,7 @@ import Banner from '@/components/Banner.vue';
 import Question from '@/components/Question.vue';
 import QuestionBreak from '@/components/QuestionBreak.vue';
 import Level from '@/components/Level.vue';
+import Event from '@/components/Event.vue';
 </script>
 
 <style lang="scss" scoped>
