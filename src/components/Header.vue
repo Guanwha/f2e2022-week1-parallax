@@ -8,7 +8,7 @@
       <img src="@/assets/header/thef2e.svg" alt="logo" class="h-[22px]">
     </div>
     <!-- right -->
-    <ul class="flex-rrc gap-8">
+    <ul class="flex-rrc gap-8 indicate">
       <li class="hidden sm:inline indicate-h"><span>關卡資訊</span></li>
       <li class="hidden sm:inline indicate-h"><span>攻略資源</span></li>
       <li class="hidden sm:inline indicate-h"><span>求職專區</span></li>
@@ -20,7 +20,7 @@
     <!-- pop menu (mobile) -->
     <div class="absolute top-0 inset-x-0 bg-cn6 flex-ccc px-4 py-8" v-if="isOpenMobileMenu">
       <div class="w-full" @click="isOpenMobileMenu = false"><img src="@/assets/header/btn_close.svg" alt="關閉選單"></div>
-      <ul>
+      <ul class="indicate">
         <li class="py-4 indicate-v"><span>關卡資訊</span></li>
         <li class="py-4 indicate-v"><span>攻略資源</span></li>
         <li class="py-4 indicate-v"><span>求職專區</span></li>
@@ -44,40 +44,6 @@ const isOpenMobileMenu = ref(false);
 <style lang="scss" scoped>
 @import '@/styles/_variables.scss';
 
-ul>li {
-  @apply text-p3 text-cn2;
-  &:hover {
-    @apply text-cn1;
-  }
-  &.indicate-h {
-    position: relative;
-    &:hover > *::before {
-      content: '';
-      position: absolute;
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 12px;
-      height: 4px;
-      @apply rounded-full;
-      @apply bg-cs1;
-    }
-  }
-  &.indicate-v {
-    position: relative;
-    &:hover > *::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: -12px;
-      transform: translateY(-50%);
-      width: 4px;
-      height: 9px;
-      @apply rounded-full;
-      @apply bg-cs1;
-    }
-  }
-}
 button:hover {
   box-shadow: 0px 0px 1rem rgba($cs1, 0.6);
 }
