@@ -4,6 +4,7 @@
   ******/
   html, body, #app {
     @apply w-full h-full;
+    @apply bg-cn6;
   }
   html {
     scroll-behavior: smooth;
