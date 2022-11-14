@@ -28,14 +28,14 @@
       </template>
     </div>
     <!-- signup button -->
-    <button class="btn-signup">立即報名</button>
+    <a class="btn-signup" href="https://2022.thef2e.com/login">立即報名</a>
   </section>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 
-const tab = ref(2);
+const tab = ref(1);
 const qas = ref({
   // tab = 1
   1: {

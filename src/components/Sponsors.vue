@@ -12,13 +12,19 @@
     <!-- sponsors -->
     <ul class="flex-rcc gap-15">
       <li class="logo-border">
-        <img class="w-35 h-35" src="@/assets/sponsors/logo_block_studio.svg" alt="block studio">
+        <a href="https://blockstudio.tw/career/">
+          <img class="w-35 h-35" src="@/assets/sponsors/logo_block_studio.svg" alt="block studio">
+        </a>
       </li>
       <li class="logo-border">
-        <img class="w-35 h-35" src="@/assets/sponsors/logo_kdan_mobile.svg" alt="kdan mobile">
+        <a href="https://www.yourator.co/companies/KdanMobile?locale=zh-TW">
+          <img class="w-35 h-35" src="@/assets/sponsors/logo_kdan_mobile.svg" alt="kdan mobile">
+        </a>
       </li>
       <li class="logo-border">
-        <img class="w-35 h-35" src="@/assets/sponsors/logo_titansoft.svg" alt="titansoft">
+        <a href="https://www.104.com.tw/company/1a2x6bin60">
+          <img class="w-35 h-35" src="@/assets/sponsors/logo_titansoft.svg" alt="titansoft">
+        </a>
       </li>
     </ul>
   </section>

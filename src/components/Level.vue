@@ -20,10 +20,10 @@
           <img :src="`src/assets/level/${level.imgName}.png`" :alt="level.imgName">
           <div class="footer flex-rsbc">
             <p class="week">{{ level.week }}</p>
-            <div class="detail flex-rcc">
+            <a class="detail flex-rcc" :href="level.link" target="_blank" ref="noopener">
               <p>查看關卡細節</p>
-              <img src="@/assets/level/link_blank.svg" :alt="`${level.imgName} detail`" target="_blank" ref="noopener">
-            </div>
+              <img src="@/assets/level/link_blank.svg" :alt="`${level.imgName} detail`">
+            </a>
           </div>
         </div>
         <!-- back -->
@@ -49,6 +49,7 @@ const levels = [
     h4: 'The F2E 活動網站設計',
     h5: '視覺滾動',
     imgName: 'level-1',
+    link: 'https://2022.thef2e.com/news/week1',
   },
   {
     week: 'WEEK 2',
@@ -56,6 +57,7 @@ const levels = [
     h4: '今晚，我想來點點簽',
     h5: 'CANVAS',
     imgName: 'level-2',
+    link: 'https://2022.thef2e.com/news/week2',
   },
   {
     week: 'WEEK 3',
@@ -63,6 +65,7 @@ const levels = [
     h4: 'Scrum 新手村',
     h5: 'JS Draggable',
     imgName: 'level-3',
+    link: 'https://2022.thef2e.com/news/week3',
   },
 ];
 
