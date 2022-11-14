@@ -4,10 +4,10 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/week_1_parallax/",
-    // process.env.NODE_ENV === "production"
-    //   ? "/week_1_parallax/"
-    //   : "./",
+  base:
+    process.env.NODE_ENV === "production"
+      ? "/f2e2022-week1-parallax/"
+      : "./",
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
