@@ -1,7 +1,25 @@
-# Vue 3 + Vite
+# [F2E2022] 第一週 - The F2E 活動網站設計
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## [Demo](https://guanwha.github.io/f2e2022-week1-parallax/)
 
-## Recommended IDE Setup
+## Features
+- F2E2022 Landing page
+- 練習 GSAP 作視差滾動
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## Language
+- HTML
+- CSS/SCSS
+- JavaScript
+
+## Framework
+- Vue 3.2.41
+- TailwindCSS 3.2.2
+
+## Library
+- GSAP 3.11.3
+
+## Build Tool
+- Vite 3.2.2
+
+## Design Ref.
+- 參考設計稿：https://2022.thef2e.com/users/12061549261447630282 by Jenny Wu
