@@ -8,7 +8,7 @@
       <img id="banner_path_right" class="w-[13.5%] absolute top-[17.5%] right-[6.8%]" src="@/assets/banner/path_right.svg" alt="path right">
       <img id="banner_title" class="w-[50%] absolute top-[15%] left-1/2 -translate-x-1/2" src="@/assets/banner/title.svg" alt="title">
       <p class="absolute top-[40%] left-1/2 -translate-x-1/2 text-[28px] tracking-[.8em] text-cn1">互動式網頁設計</p>
-      <button class="absolute top-[55%] left-1/2 -translate-x-1/2 btn-signup">立即報名</button>
+      <a class="absolute top-[55%] left-1/2 -translate-x-1/2 btn-signup" href="https://2022.thef2e.com/login">立即報名</a>
     </section>
     <!-- marquee -->
     <section class="absolute bottom-8 left-0 right-0 flex-rcc overflow-hidden">

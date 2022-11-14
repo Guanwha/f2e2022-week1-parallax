@@ -1,5 +1,5 @@
 <template>
-  <section id="question" class="mx-auto max-w-[1440px] min-w-[375px] relative" style="padding-bottom: 71%">
+  <section id="question" class="mx-auto mb-48 max-w-[1440px] min-w-[375px] relative" style="padding-bottom: 71%">
     <img id="q1-1" class="question-1 absolute w-[19.4%] top-[13.9%] left-[23.9%]" src="@/assets/question/q1-1.svg" alt="q1-1">
     <img id="q1-2" class="question-1 absolute w-[4.4%] top-[14.7%] left-[47.2%]" src="@/assets/question/q1-2.svg" alt="q1-2">
     <img id="q1-3" class="question-1 absolute w-[13.3%] top-[20.5%] left-[60.0%]" src="@/assets/question/q1-3.svg" alt="q1-3">

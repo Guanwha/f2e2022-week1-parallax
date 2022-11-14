@@ -9,23 +9,25 @@
     </div>
     <!-- right -->
     <ul class="flex-rrc gap-8 indicate">
-      <li class="hidden sm:inline indicate-h"><span>關卡資訊</span></li>
-      <li class="hidden sm:inline indicate-h"><span>攻略資源</span></li>
-      <li class="hidden sm:inline indicate-h"><span>求職專區</span></li>
-      <button type="button" class="ml-4 border rounded-button" :class="[classLoginBtnPadding, classLoginBtnNormal, classLoginBtnHover]">
+      <li class="hidden sm:inline indicate-h"><a href="https://2022.thef2e.com/news">關卡資訊</a></li>
+      <li class="hidden sm:inline indicate-h"><a href="https://2022.thef2e.com/works">作品列表</a></li>
+      <li class="hidden sm:inline indicate-h"><a href="https://hexschool.tw/OsAcp">攻略資源</a></li>
+      <li class="hidden sm:inline indicate-h"><a href="https://2022.thef2e.com/jobs">求職專區</a></li>
+      <a class="ml-4 border rounded-button" :class="[classLoginBtnPadding, classLoginBtnNormal, classLoginBtnHover]" href="https://2022.thef2e.com/login">
         <span class="inline sm:hidden">立即報名</span>
         <span class="hidden sm:inline">登入</span>
-      </button>
+      </a>
     </ul>
     <!-- pop menu (mobile) -->
     <div class="absolute top-0 inset-x-0 bg-cn6 flex-ccc px-4 py-8" v-if="isOpenMobileMenu">
       <div class="w-full" @click="isOpenMobileMenu = false"><img src="@/assets/header/btn_close.svg" alt="關閉選單"></div>
       <ul class="indicate">
-        <li class="py-4 indicate-v"><span>關卡資訊</span></li>
-        <li class="py-4 indicate-v"><span>攻略資源</span></li>
-        <li class="py-4 indicate-v"><span>求職專區</span></li>
+        <li class="py-4 indicate-v"><a href="https://2022.thef2e.com/news">關卡資訊</a></li>
+        <li class="py-4 indicate-v"><a href="https://2022.thef2e.com/works">作品列表</a></li>
+        <li class="py-4 indicate-v"><a href="https://hexschool.tw/OsAcp">攻略資源</a></li>
+        <li class="py-4 indicate-v"><a href="https://2022.thef2e.com/jobs">求職專區</a></li>
       </ul>
-      <button type="button" class="mt-6 w-full border rounded-button py-2" :class="[classLoginBtnNormal, classLoginBtnHover]">登入</button>
+      <a class="mt-6 w-full border rounded-button py-2" :class="[classLoginBtnNormal, classLoginBtnHover]" href="https://2022.thef2e.com/login">登入</a>
     </div>
   </header>
 </template>
